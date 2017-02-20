@@ -1,0 +1,14 @@
+<h1>Pages#game</h1>
+<p>Find me in app/views/pages/game.html.erb</p>
+
+<%= @grid %>
+<div class="form-group">
+<form action="/score" method="get">
+  <label for="question">Enter your best guess</label>
+  <input class="form-control" type="text" id="question" name="attempt" placeholder="You attempt">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input class="btn btn-primary" type="submit" value="Go on!">
+</form>
+</div>
+
